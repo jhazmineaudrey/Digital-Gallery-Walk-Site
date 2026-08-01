@@ -15,3 +15,35 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+
+const viewArtButton = document.querySelector("#LANDING-PAGE-BUTTON");
+const landing = document.querySelectorAll(".landing");
+
+window.addEventListener("load", () => {
+    const introText = document.querySelector("#LANDING-PAGE-INTRO");
+    introText.classList.add("hide");
+
+    introText.addEventListener("animationend", (anim) => {
+        if (anim.animationName === "fade") {
+            introText.style.visibility = "hidden";
+            introText.style.opacity = "0"
+        }
+    })
+})
+
+viewArtButton.addEventListener("click", () => {
+    landing.forEach(el => {
+        el.animate(
+            [
+                { transform: "translateY(0)" },
+                { transform: "translateY(-120vh)" }
+            ],
+            {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            }
+        );
+    });
+
+});

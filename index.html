@@ -44,10 +44,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <!-- External Links -->
         <link rel="stylesheet" href="./styles.css"/>
-        <script src="./app.js"></script></head>
+        <script src="./app.js" defer></script></head>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Yesteryear&display=swap" rel="stylesheet">
+
     <body>
-        <div id="LANDING-PAGE-ANIM">
-            <h1>DIGITAL GALLERY WALK</h1>
+        <video autoplay muted loop id="LANDING-PAGE-VIDEO" class="landing">
+            <source src="./assets/landing-bg.mp4"/>
+        </video>
+        <div id="LANDING-PAGE-ANIM" class="landing">
+            <p id="LANDING-PAGE-INTRO"> 11 - CASSIA presents... </p>
+            <h1><span>DIGITAL</span> <span>GALLERY</span> <span>WALK</span></h1>
+            <p> "You too, can have a place among the stars."</p>
+            <button id="LANDING-PAGE-BUTTON">
+                View the Art
+                <br> v
+            </button>
         </div>
         <header>
             <ul>
