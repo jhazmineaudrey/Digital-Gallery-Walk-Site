@@ -383,7 +383,7 @@ nav {
         background-color: rebeccapurple;
         height: 70%;
         width: 100%;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .carousel::-webkit-scrollbar {
