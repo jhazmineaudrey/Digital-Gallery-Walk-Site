@@ -46,11 +46,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <link rel="stylesheet" href="./styles.css"/>
         <script src="./app.js" defer></script></head>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Yesteryear&display=swap" rel="stylesheet">
 
     <body>
+        <!--
         <video autoplay muted loop id="LANDING-PAGE-VIDEO" class="landing">
             <source src="./assets/landing-bg.mp4"/>
         </video>
@@ -62,15 +64,22 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
                 View the Art
                 <br> v
             </button>
-        </div>
+        </div> -->
         <header>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href="" id="ACKNOWLEDGEMENTS-LINK">Acknowledgements</a></li>
-            </ul>
+            <div id="MOB-NAV">
+                <a id="HOME" href=""></a>
+                <input type="checkbox" id="HAMBURGER"/>
+                <label for="HAMBURGER"></label>
+            </div>
+            <nav>
+                <ul id="MENU">
+                    <li class="item"><a href="#PT1">SYMMETRY</a></li>
+                    <li class="item"><a href="#PT2">FRIEZE</a></li>
+                    <li class="item"><a href="#PT3">TESSELLATIONS</a></li>
+                    <li class="item"><a href="#PT4">FRACTALS</a></li>
+                    <li class="item"><a href="#MAIN-ACKNOWLEDGEMENTS" id="ACKNOWLEDGEMENTS-LINK">ACKNOWLEDGEMENTS</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section id="LANDING">

@@ -16,6 +16,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+//LANDING
+
+/*
 const viewArtButton = document.querySelector("#LANDING-PAGE-BUTTON");
 const landing = document.querySelectorAll(".landing");
 
@@ -31,12 +34,12 @@ window.addEventListener("load", () => {
     })
 })
 
-viewArtButton.addEventListener("click", () => {
+viewArtButton.addEventListener("click", async () => {
     landing.forEach(el => {
-        el.animate(
+        const anim = el.animate(
             [
-                { transform: "translateY(0)" },
-                { transform: "translateY(-120vh)" }
+                { transform: "translateY(0)", opacity: "1"},
+                { transform: "translateY(-120vh)", opacity: "0" }
             ],
             {
                 duration: 1000,
@@ -44,6 +47,11 @@ viewArtButton.addEventListener("click", () => {
                 fill: "forwards"
             }
         );
-    });
 
-});
+        anim.onfinish = () => {
+            el.remove();
+        };
+    });
+});*/
+
+//
