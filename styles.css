@@ -367,7 +367,7 @@ nav {
     }
 }
 
-    /* PT1 */
+    /* PTs */
     .PTs {
         display: flex;
         box-sizing: border-box;
@@ -380,10 +380,9 @@ nav {
 
     .carousel {
         display: flex;
-        background-color: rebeccapurple;
         height: 70%;
         width: 100%;
-        overflow-x: hidden;
+        overflow-x: clip;
     }
 
     .carousel::-webkit-scrollbar {
@@ -396,22 +395,68 @@ nav {
         justify-content: center;
         gap: 1rem;
         padding: 1rem 1rem 1rem 0;
-        animation: spin 5s infinite linear;
+        animation: spin 50s infinite linear;
     }
 
     .carousel:hover .group {
         animation-play-state: paused
     }
 
+    .carousel:has(.artwork-card:hover) {
+        overflow-y: visible;
+    }
+
     .artwork-card {
         width: 50vw;
-        background-color: aqua;
-        height: 80%;
-        padding: 1em;
+        box-sizing: content-box;
+        position: relative;
+        height: 100%;
         border-radius: 0.5em;
         align-content: center;
         text-align: center;
         font-size: 3rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .artwork-card img {
+        background-color: bisque;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5em;
+    }
+
+    .artwork-card:hover {
+        box-shadow: 0px 5px 15px 5px rgba(255, 255, 255, 0.72);
+        scale: 1.05;
+        z-index: 100;
+    }
+
+    .card-overlay:hover {
+        opacity: 1;
+    }
+
+    .card-overlay {
+        display: flex;
+        background: linear-gradient(
+            to top,
+            rgba(34, 123, 195, 1) 0%, 
+            rgba(67, 145, 213, 0.54) 26%,
+            rgba(143, 197, 255, 0.52) 47%, 
+            rgba(143, 197, 255, 0.21) 71%, 
+            rgba(143, 197, 255, 0) 88%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        border-radius: inherit;
+        align-items: flex-end;
+        opacity: 0;
+        font-family: "Genos", sans-serif;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .card-overlay strong {
+        padding-left: 1rem; 
     }
 
 /* ANIMATION CLASSES */
