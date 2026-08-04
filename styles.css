@@ -399,6 +399,10 @@ nav {
         animation: spin 5s infinite linear;
     }
 
+    .carousel:hover .group {
+        animation-play-state: paused
+    }
+
     .artwork-card {
         width: 50vw;
         background-color: aqua;
