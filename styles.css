@@ -164,6 +164,7 @@ header {
     width: 100%;
     height: fit-content;
     background-color: rgba(80, 107, 225, 0.916);
+    z-index: 100;
 }
 
 #HAMBURGER {
@@ -299,6 +300,42 @@ nav {
     #MOB-NAV:has(#HAMBURGER:checked) ~ nav #MENU {
         max-height: 500px;
     }
+}
+
+/* SECTIONS */
+#LANDING {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#LANDING img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+}
+
+#LANDING h1 {
+    color: white;
+    font-size: 8vw;
+    font-family: "Oxanium", sans-serif;
+    margin: 0;
+    animation: up 1s infinite ease-in-out alternate;
+    z-index: 0;
+}
+
+#LANDING p {
+    color: white;
+    font-family: "Genos", sans-serif;
+    font-size: 2vw;
+    margin: 10px
 }
 
 /* ANIMATION CLASSES */
