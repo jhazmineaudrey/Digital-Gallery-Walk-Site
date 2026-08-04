@@ -161,7 +161,7 @@ header {
     top: 0;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: fit-content;
     background-color: rgba(80, 107, 225, 0.916);
     z-index: 100;
@@ -311,6 +311,7 @@ nav {
     text-align: center;
     justify-content: center;
     text-align: center;
+    overflow-x: hidden;
 }
 
 #LANDING img {
@@ -318,7 +319,7 @@ nav {
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100vw;
+    width: 100%;
     height: 100%;
 }
 
@@ -327,15 +328,17 @@ nav {
     font-size: 8vw;
     font-family: "Oxanium", sans-serif;
     margin: 0;
-    animation: up 1s infinite ease-in-out alternate;
     z-index: 0;
+	animation: float 6s ease-in-out infinite;
 }
 
 #LANDING p {
     color: white;
     font-family: "Genos", sans-serif;
     font-size: 2vw;
-    margin: 10px
+    margin: 10px;
+	animation: float 6s ease-in-out infinite;
+    animation-delay: 1s;
 }
 
 /* ANIMATION CLASSES */
@@ -373,4 +376,16 @@ nav {
     100% {
         rotate: 1deg;
     }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
