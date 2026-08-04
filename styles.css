@@ -24,7 +24,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(43, 48, 72);
+    background-color: rgb(23, 29, 60);
 }
 
 /*LANDING STYLES*/
@@ -340,6 +340,18 @@ nav {
 	animation: float 6s ease-in-out infinite;
     animation-delay: 1s;
 }
+
+@media screen and (max-width: 425px) {
+    #LANDING h1 {
+        font-size: 20vw;
+        margin-top: 3rem
+    } 
+
+    #LANDING p {
+        font-size: 5vw;
+    }
+}
+
 
 /* ANIMATION CLASSES */
 .hide {
