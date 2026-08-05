@@ -376,6 +376,39 @@ nav {
         height: 90vh;
         border-top: 1px solid var(--border-color);
         border-bottom: 1px solid var(--border-color);
+        text-align: center;
+        scroll-margin-top: 63px
+    }
+
+    h2:has(.section-title) {
+        margin-top: 3rem;
+        margin-bottom: 0
+    }
+
+    .pt-title {
+        color: white;
+        margin: 0;
+        font-family: "Genos", sans-serif;
+        font-size: 3vw;
+    }
+
+    .section-title {
+        all: unset;
+        font-family: "Oxanium", sans-serif;
+        color: white;
+        font-size: 4vw;
+        transition: color 0.3s ease-in-out
+    }
+  
+    .section-title:hover {
+        color: rgba(34, 123, 195, 1);
+        cursor: pointer
+    }
+
+    .section-desc {
+        color: white;
+        font-family: "Yesteryear", cursive;
+        font-size: 1.3vw;
     }
 
     .carousel {
@@ -457,6 +490,28 @@ nav {
 
     .card-overlay strong {
         padding-left: 1rem; 
+    }
+
+    @media screen and (max-width: 425px) {
+        .section-title {
+            all: unset;
+            font-family: "Oxanium", sans-serif;
+            color: white;
+            font-size: 8vw;
+            transition: color 0.3s ease-in-out
+        }
+
+        .section-desc {
+            font-size: 3.8vw;
+        }
+
+        .pt-title {
+            font-size: 7vw;
+        }
+
+        .artwork-card {
+            width: 90vw
+        }
     }
 
 /* ANIMATION CLASSES */
