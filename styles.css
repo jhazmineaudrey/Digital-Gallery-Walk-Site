@@ -576,7 +576,7 @@ nav {
         background-color: none;
         border-radius: 1rem;
         border: 0.3rem solid var(--border-color);
-        background-color: rgba(136, 200, 255, 0.645);
+        background-color: rgba(136, 199, 255, 0.386);
         width: 75%;
         height: 80%;
         overflow: hidden;
@@ -621,8 +621,9 @@ nav {
         height: auto;
         aspect-ratio: 1/1;
         background-color: none;
-        border: 0.1rem solid rgb(94, 195, 253);
+        border: 0.2rem solid rgb(94, 195, 253);
         border-radius: 1rem;
+        background-color: rgba(255, 255, 255, 0.314);
         transition : background-color 0.2s ease-in-out;
     }
 
@@ -656,6 +657,59 @@ nav {
         #ZOOM-IMG {
             object-fit: contain;
         }
+    }
+
+    /* ACKNOWLEDGEMENTS */
+    #MAIN-ACKNOWLEDGEMENTS {
+        position: relative;
+        background-color: rgb(222, 222, 128);
+    }
+
+    #MAIN-ACKNOWLEDGEMENTS h2 {
+        position: absolute;
+        top: -50%;
+        font-family: "Oxanium", sans-serif;
+        color: white;
+        font-size: 3rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #ACKNOWLEDGEMENTS-CONT {
+        display: grid;
+        width: 100%;
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        justify-content: center;
+        gap: 1rem;
+        box-sizing: border-box;
+    }
+
+    .acknowledgement-card {
+        display: flex;
+        width: 90%;
+        gap: 1rem;
+        background-color: rgb(229, 200, 111);
+        padding: 1.5rem;
+        justify-self: center;
+    }
+
+    .acknowledgement-card img {
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 20rem;
+        background-color: rebeccapurple;
+    }
+
+    .acknowledgement-card strong {
+        font-family: "Oxanium", sans-serif;
+        font-size: 1.5vw;
+    }
+
+    .acknowledgement-card p {
+        font-family: "Genos", sans-serif;
+        font-size: 1vw;
+        margin-top: 0
     }
 
 /* ANIMATION CLASSES */
