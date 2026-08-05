@@ -181,6 +181,7 @@ header {
     height: fit-content;
     background-color: rgba(80, 107, 225, 0.916);
     z-index: 100;
+    transition: filter 0.5s ease-in-out
 }
 
 #HAMBURGER {
@@ -284,7 +285,6 @@ nav {
     header {
         display: flex;
         flex-direction: column;
-        transition: filter 0.5s ease-in-out
     }
 
     #MENU {
@@ -330,6 +330,7 @@ nav {
     text-align: center;
     overflow-x: hidden;
     background-image: url(./assets/landing-pic.jpg);
+    background-size: cover;
 }
 
 #LANDING h1 {
@@ -438,15 +439,15 @@ nav {
     }
 
     .artwork-card {
-        width: 50vw;
+        width: 45vw;
         box-sizing: content-box;
         position: relative;
-        height: 100%;
+        height: 90%;
         border-radius: 0.5em;
         align-content: center;
         text-align: center;
         font-size: 3rem;
-        cursor: grab;
+        cursor: pointer;
         transition: all 0.3s ease-in-out;
     }
 
@@ -515,6 +516,14 @@ nav {
         filter: brightness(30%);
     }
 
+    body:has(#ZOOMED-IN-CONTAINER.active) {
+        overflow: hidden;
+    }
+
+    body:has(#ZOOMED-IN-CONTAINER.active) main .group {
+        animation-play-state: paused;
+    }
+
     #ZOOMED-IN-CONTAINER {
         display: flex;
         position: fixed;
@@ -524,11 +533,13 @@ nav {
         opacity: 0;
         justify-content: center;
         align-items: center;
+        pointer-events: none;
         transition: opacity 0.5s ease-in-out
     }
 
     #ZOOMED-IN-CONTAINER.active {
-        opacity: 1
+        opacity: 1;
+        pointer-events: all;
     }
 
     #ZOOM-IMG-CONT {
@@ -538,7 +549,8 @@ nav {
         border: 0.2rem solid var(--border-color);
         background-color: rgba(136, 200, 255, 0.645);
         width: 75%;
-        height: 80%
+        height: 80%;
+        overflow: hidden;
     }
 
     #ZOOM-CONT-CLOSE {
@@ -596,6 +608,12 @@ nav {
         font-family: "Material Icons";
         font-size: 3rem;
         align-self: center;
+    }
+
+    #ZOOM-IMG {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
 /* ANIMATION CLASSES */

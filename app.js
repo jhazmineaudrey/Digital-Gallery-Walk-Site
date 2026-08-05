@@ -54,4 +54,21 @@ viewArtButton.addEventListener("click", async () => {
     });
 });*/
 
-//
+// ZOOM IN
+const card = document.querySelectorAll(".artwork-card");
+const zoomCont = document.querySelector("#ZOOMED-IN-CONTAINER");
+const zoomContBtn = document.querySelector("#ZOOM-CONT-CLOSE");
+
+card.forEach((el) => {
+    el.addEventListener("click", () => {
+        const imgHolder = document.querySelector("#ZOOM-IMG");
+        zoomCont.classList.add("active");
+        const img = el.firstElementChild.src;
+
+        imgHolder.src = img;
+    })
+});
+
+zoomContBtn.addEventListener("click", () => {
+    zoomCont.classList.remove("active")
+})
