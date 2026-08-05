@@ -61,11 +61,13 @@ const zoomContBtn = document.querySelector("#ZOOM-CONT-CLOSE");
 
 card.forEach((el) => {
     el.addEventListener("click", () => {
+        const download = document.querySelector("#ZOOM-CONT-DOWNLOAD");
         const imgHolder = document.querySelector("#ZOOM-IMG");
         zoomCont.classList.add("active");
         const img = el.firstElementChild.src;
 
         imgHolder.src = img;
+        download.href = String(img)
     })
 });
 
