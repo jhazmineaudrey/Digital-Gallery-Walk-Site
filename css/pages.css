@@ -208,8 +208,12 @@ nav {
 
     .group {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: max-content max-content;
         justify-content: center;
+        width: 100%;
+        padding: 1vw;
+        box-sizing: border-box;
+        justify-self: center
     }
 
     h2:has(.section-title) {
@@ -350,6 +354,10 @@ nav {
         .card-overlay strong {
             font-size: 6vw;
             padding: 0 0 1rem 0;
+        }
+
+        .group {
+            grid-template-columns: max-content;
         }
     }
 
