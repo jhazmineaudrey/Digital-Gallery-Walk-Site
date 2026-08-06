@@ -846,7 +846,26 @@ footer p {
     animation-delay: 1.5s
 }
 
+@media screen and (max-width: 425px) {
+    footer strong {
+        font-size: 7vw;
+        font-family: "Oxanium", sans-serif;
+        margin-top: 2rem;
+        animation: float 5s ease-in-out infinite alternate;
+    }
 
+    #FOOTER-ABOUT {
+        font-size: 3.5vw;
+        width: 95vw;
+    }
+
+    #FOOTER-CONTACT a img {
+        width: 10vw;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 30rem;
+    }
+}
 
 
 /* ANIMATION CLASSES */
