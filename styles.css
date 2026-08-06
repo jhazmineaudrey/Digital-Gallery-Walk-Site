@@ -698,6 +698,7 @@ nav {
         gap: 1rem;
         box-sizing: border-box;
         margin-top: 0;
+        min-height: auto;
     }
 
     .acknowledgement-card {
@@ -775,6 +776,49 @@ nav {
             margin-top: 0
         }
     }
+
+    #loadbtn {
+        display: none;
+    }
+
+    #LOADBTNCONT {
+        display: flex;
+        justify-content: center;
+    }
+
+    #MAIN-ACKNOWLEDGEMENTS label {
+        display: inline-block;
+        background-color: rgb(255, 196, 58);
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 0 1rem 1rem 1rem;
+        font-family: "Oxanium", sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out
+    }
+
+    #MAIN-ACKNOWLEDGEMENTS label:hover {
+        cursor: pointer;
+        background-color: rgb(255, 187, 28);
+        
+    }
+
+    #loadbtn ~ #LOADBTNCONT > #VIEWLESS,
+    #loadbtn:checked ~ #LOADBTNCONT > #VIEWMORE,
+    #loadbtn ~ #ACKNOWLEDGEMENTS-CONT > article:nth-child(n + 7) {
+        display: none;
+    }
+
+    #loadbtn ~ #LOADBTNCONT > #VIEWMORE,
+    #loadbtn:checked ~ #LOADBTNCONT > #VIEWLESS {
+        display: inline-block
+    }
+
+    
+    #loadbtn:checked ~ #ACKNOWLEDGEMENTS-CONT > article:nth-child(n + 7) {
+        display: flex
+    }
+
 
 /* FOOTER */
 footer {
