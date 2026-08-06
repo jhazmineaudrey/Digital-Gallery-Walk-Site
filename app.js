@@ -15,3 +15,62 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+
+//LANDING
+
+/*
+const viewArtButton = document.querySelector("#LANDING-PAGE-BUTTON");
+const landing = document.querySelectorAll(".landing");
+
+window.addEventListener("load", () => {
+    const introText = document.querySelector("#LANDING-PAGE-INTRO");
+    introText.classList.add("hide");
+
+    introText.addEventListener("animationend", (anim) => {
+        if (anim.animationName === "fade") {
+            introText.style.visibility = "hidden";
+            introText.style.opacity = "0"
+        }
+    })
+})
+
+viewArtButton.addEventListener("click", async () => {
+    landing.forEach(el => {
+        const anim = el.animate(
+            [
+                { transform: "translateY(0)", opacity: "1"},
+                { transform: "translateY(-120vh)", opacity: "0" }
+            ],
+            {
+                duration: 1000,
+                easing: "ease",
+                fill: "forwards"
+            }
+        );
+
+        anim.onfinish = () => {
+            el.remove();
+        };
+    });
+});*/
+
+// ZOOM IN
+const card = document.querySelectorAll(".artwork-card");
+const zoomCont = document.querySelector("#ZOOMED-IN-CONTAINER");
+const zoomContBtn = document.querySelector("#ZOOM-CONT-CLOSE");
+
+card.forEach((el) => {
+    el.addEventListener("click", () => {
+        const download = document.querySelector("#ZOOM-CONT-DOWNLOAD");
+        const imgHolder = document.querySelector("#ZOOM-IMG");
+        zoomCont.classList.add("active");
+        const img = el.firstElementChild.src;
+
+        imgHolder.src = img;
+        download.href = String(img)
+    })
+});
+
+zoomContBtn.addEventListener("click", () => {
+    zoomCont.classList.remove("active")
+})

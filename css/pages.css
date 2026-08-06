@@ -1,0 +1,633 @@
+/*
+The Digital Gallery Walk Site is a website which can display several downloadable artworks based on previously-set categories. 
+Copyright (C) 2026 Jhazmine Audrey Perez
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* GLOBAL STYLES */
+:root {
+    --border-color: #5fc3f5
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(13, 18, 44);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 7rem;
+    transition: filter 0.5s ease-in-out
+}
+
+/* NAVIGATION */
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(80, 107, 225, 0.916);
+    z-index: 999;
+    transition: filter 0.5s ease-in-out
+}
+
+#HAMBURGER {
+    display: none
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    margin: 0 1rem
+}
+
+#MENU {
+    all: unset;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    all: unset;
+    font-family: "Genos", sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    width: 90%;
+    justify-self: center;
+}
+
+.item a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    align-self: center;
+    line-height: 3vw;
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.item a:hover {
+    background-color: rgba(149, 149, 255, 0.537);
+}
+
+#HOME {
+    all: unset;
+    color: white;
+}
+
+#HOME:hover::after {
+    color: rgba(149, 149, 255);
+    cursor: pointer
+}
+
+#HOME::after {
+    display: inline-block;
+    content: "home";
+    font-family: "Material Icons";
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    align-content: center;
+    font-size: 3.7rem;
+    transition: color 0.3s ease-in-out
+}
+
+@media screen and (max-width: 425px) {
+    #MOB-NAV {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #MOB-NAV label {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1 / 1;
+        text-align: center;
+        align-content: center;
+        font-size: 3.7rem;
+        color: white;
+    }
+    
+    #MOB-NAV label::before {
+        content: "menu";
+        font-family: "Material Icons";
+    }
+
+    #HAMBURGER:checked ~ label::before {
+        content: "close";
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #MENU {
+        display: flex;
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .item a {
+        height: 4rem;
+        font-size: 7vw;
+        border-radius: 0%;
+        text-align: center;
+        align-content: center;
+        border-top: 1px solid white;
+        background-color: rgba(149, 149, 255, 0.4);
+    }
+
+    #MOB-NAV:has(#HAMBURGER:checked) ~ nav #MENU {
+        max-height: 500px;
+    }
+}
+
+/* SECTIONS */
+    /* PTs */
+    .PTs {
+        margin-top: 10vh;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-self: center;
+        width: 97%;
+        height: fit-content;
+        border: 5px solid var(--border-color);
+        border-radius: 1rem;
+        text-align: center;
+        scroll-margin-top: 70px;
+        overflow-y: visible;
+        background-color: rgb(13, 18, 44);
+        box-shadow: 0px 0px 20px 10px rgba(44,161,255,0.98);
+    }
+
+    .group {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+        width: 100%;
+        padding: 1vw;
+        box-sizing: border-box;
+        justify-self: center
+    }
+
+    h2:has(.section-title) {
+        margin-top: 2rem;
+        margin-bottom: 0
+    }
+
+    .pt-title {
+        color: white;
+        margin: 0;
+        font-family: "Genos", sans-serif;
+        font-size: 3vw;
+    }
+
+    .section-title {
+        all: unset;
+        font-family: "Oxanium", sans-serif;
+        color: rgb(70, 220, 217);
+        font-size: 4vw;
+        transition: color 0.3s ease-in-out;
+        margin-top: 1.5rem;
+        animation: up 2s infinite ease-in-out alternate;
+    }
+
+    .section-desc {
+        color: white;
+        font-family: "Yesteryear", cursive;
+        font-size: 1.3vw;
+    }
+
+    .artwork-card {
+        width: 45vw;
+        box-sizing: content-box;
+        position: relative;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: 0.5em;
+        align-content: center;
+        text-align: center;
+        font-size: 3rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        justify-self: center;
+        margin: 1rem
+    }
+
+    .artwork-card img {
+        background-color: bisque;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5em;
+        position: absolute;
+        bottom: 0;
+        left: 0
+    }
+
+    .artwork-card:hover {
+        box-shadow: 0px 5px 15px 5px rgba(255, 255, 255, 0.72);
+        scale: 1.05;
+        z-index: 200;
+    }
+
+    .card-overlay:hover {
+        opacity: 1;
+    }
+
+    .card-overlay {
+        display: flex;
+        box-sizing: content-box;
+        background: linear-gradient(
+            to top,
+            rgba(34, 123, 195, 1) 0%, 
+            rgba(67, 145, 213, 0.54) 26%,
+            rgba(143, 197, 255, 0.52) 47%, 
+            rgba(143, 197, 255, 0.21) 71%, 
+            rgba(143, 197, 255, 0) 88%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        border-radius: inherit;
+        align-items: flex-end;
+        opacity: 0;
+        font-family: "Genos", sans-serif;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .card-overlay strong {
+        padding-left: 2rem; 
+        padding-bottom: 1rem;
+        font-size: 3vw;
+    }
+
+    @media screen and (max-width: 425px) {
+        main {
+            gap: 6rem;
+        }
+
+        .PTs {
+            width: 100%;
+            border-left: none;
+            border-right: none;
+            border-radius: 0.2rem;
+            margin-top: 11vh;
+        }
+
+        .section-title {
+            font-size: 8vw;
+        }
+
+        .section-desc {
+            font-size: 3.8vw;
+        }
+
+        .pt-title {
+            font-size: 7vw;
+        }
+
+        .artwork-card {
+            width: 90vw;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+        }
+
+        .artwork-card img {
+            object-fit: cover;
+        }
+
+        #ZOOM-IMG-CONT {
+            object-fit: contain;
+        }
+
+        .card-overlay {
+            opacity: 1;
+            justify-content: center;
+        }
+
+        .card-overlay strong {
+            font-size: 6vw;
+            padding: 0 0 1rem 0;
+        }
+
+        .group {
+            grid-template-columns: max-content;
+        }
+    }
+
+    /* ZOOMED IN PIC */
+
+    body:has(#ZOOMED-IN-CONTAINER.active) main, body:has(#ZOOMED-IN-CONTAINER.active) header, body:has(#ZOOMED-IN-CONTAINER.active) footer {
+        filter: brightness(30%);
+    }
+
+    body:has(#ZOOMED-IN-CONTAINER.active) {
+        overflow: hidden;
+    }
+
+    body:has(#ZOOMED-IN-CONTAINER.active) main .group {
+        animation-play-state: paused;
+    }
+
+    #ZOOMED-IN-CONTAINER {
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        opacity: 0;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out
+    }
+
+    #ZOOMED-IN-CONTAINER.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    #ZOOM-IMG-CONT {
+        position: relative;
+        background-color: none;
+        border-radius: 1rem;
+        border: 0.3rem solid var(--border-color);
+        background-color: rgba(136, 199, 255, 0.5);
+        width: 75%;
+        height: 80%;
+        overflow: hidden;
+    }
+
+    #ZOOM-CONT-CLOSE {
+        all: unset;
+        padding: 0.3rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: fit-content;
+        height: auto;
+        aspect-ratio: 1/1;
+        background-color: none;
+        color: rgb(94, 195, 253);
+        transition : background-color 0.2s ease-in-out;
+    }
+
+    #ZOOM-CONT-CLOSE:hover {
+        background-color: red;
+        cursor: pointer
+    }
+
+    #ZOOM-CONT-CLOSE::after {
+        display: block;
+        content: " ";
+        content: "close";
+        color: rgb(94, 195, 253);
+        font-family: "Material Icons";
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    #ZOOM-CONT-DOWNLOAD {
+        all: unset;
+        padding: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        width: fit-content;
+        height: auto;
+        aspect-ratio: 1/1;
+        background-color: none;
+        border: 0.2rem solid rgb(94, 195, 253);
+        border-radius: 1rem;
+        background-color: rgba(255, 255, 255, 0.314);
+        transition : background-color 0.2s ease-in-out;
+    }
+
+    #ZOOM-CONT-DOWNLOAD:hover {
+        background-color: rgba(74, 189, 255, 0.586);
+        cursor: pointer
+    }
+
+    #ZOOM-CONT-DOWNLOAD::after {
+        display: block;
+        content: " ";
+        content: "download";
+        color: rgb(94, 195, 253);
+        font-family: "Material Icons";
+        font-size: 3rem;
+        align-self: center;
+    }
+
+    #ZOOM-IMG {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 425px) {
+        #ZOOM-IMG-CONT {
+            width: 95%;
+            height: 70%;
+        }
+
+        #ZOOM-IMG {
+            object-fit: contain;
+        }
+    }
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(80, 107, 225);
+    margin-top: 3rem;
+    overflow: hidden;
+    border-top: 5px solid var(--border-color);
+    box-shadow: 0px 0px 20px 10px rgba(44,161,255,0.98);
+    align-items: center;
+    color: white;
+    transition: filter 0.5s ease-in-out
+}
+
+footer strong {
+    font-size: 3vw;
+    font-family: "Oxanium", sans-serif;
+    margin-top: 2rem;
+    animation: float 5s ease-in-out infinite alternate
+}
+
+#FOOTER-ABOUT  {
+    text-align: center;
+    font-size: 1.5vw;
+    width: 60vw;
+    font-family: "Genos", sans-serif;
+    animation: float 5s ease-in-out infinite alternate;
+    animation-delay: 0.5s
+}
+
+
+#FOOTER-ABOUT a {
+    color: rgb(105, 221, 227)
+}
+
+#FOOTER-CONTACT {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    animation: float 5s ease-in-out infinite alternate;
+    animation-delay: 1s
+}
+
+#FOOTER-CONTACT a img {
+    width: 3vw;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 30rem;
+}
+
+#FOOTER-CONTACT a {
+    display: flex;
+    transition: all 0.6s ease-in-out;
+    border-radius: 30rem;
+    justify-content: center;
+    align-items: center
+}
+
+#FOOTER-CONTACT a:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.72);
+}
+
+footer p {
+    font-family: "Genos", sans-serif;
+    animation: float 5s ease-in-out infinite alternate;
+    animation-delay: 1.5s
+}
+
+@media screen and (max-width: 425px) {
+    footer strong {
+        font-size: 7vw;
+        font-family: "Oxanium", sans-serif;
+        margin-top: 2rem;
+        animation: float 5s ease-in-out infinite alternate;
+    }
+
+    #FOOTER-ABOUT {
+        font-size: 3.5vw;
+        width: 95vw;
+    }
+
+    #FOOTER-CONTACT a img {
+        width: 10vw;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 30rem;
+    }
+}
+
+
+/* ANIMATION CLASSES */
+.hide {
+    animation: fade 1s reverse
+}
+
+.show {
+    animation: fade 1s forwards;
+}
+
+/* ANIMATIONS */
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(-7px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes up {
+    0% {
+        rotate: -1deg;
+    }
+    100% {
+        rotate: 1deg;
+    }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
+}

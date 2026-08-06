@@ -29,11 +29,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <meta name="author" content="Jhazmine Audrey Perez"/>
 
         <!-- Open Graph Tags-->
-        <meta property="og:title" content="Digital Gallery Walk | [Section Name]"/>
+        <meta property="og:title" content="Digital Gallery Walk | Cassia"/>
         <meta
             property="og:description"
             content="Digital Gallery Walk | A permanent version of the Finite Mathematics
-            Gallery Walk project of [Section Name Here]."
+            Gallery Walk project of Cassia."
         /> 
         <meta property="og:url" content=""/> <!-- Add Domain URL here-->
 
@@ -43,234 +43,566 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
         <meta property="og:type" content="Website"/>
 
         <!-- External Links -->
-        <link rel="stylesheet" href="./styles.css"/>
-        <script src="./app.js"></script></head>
+        <link rel="stylesheet" href="./css/styles.css"/>
+        <script src="./app.js" defer></script>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Yesteryear&display=swap" rel="stylesheet">
+    </head>
     <body>
-        <div id="LANDING-PAGE-ANIM">
-            <h1>DIGITAL GALLERY WALK</h1>
+        <!--
+        <video autoplay muted loop id="LANDING-PAGE-VIDEO" class="landing">
+            <source src="./assets/landing-bg.mp4"/>
+        </video>
+        <div id="LANDING-PAGE-ANIM" class="landing">
+            <p id="LANDING-PAGE-INTRO"> 11 - CASSIA presents... </p>
+            <h1><span>DIGITAL</span> <span>GALLERY</span> <span>WALK</span></h1>
+            <p> "You too, can have a place among the stars."</p>
+            <button id="LANDING-PAGE-BUTTON">
+                View the Art
+                <br> v
+            </button>
+        </div> -->
+        <div id="ZOOMED-IN-CONTAINER">
+            <div id="ZOOM-IMG-CONT">
+                <img id="ZOOM-IMG"/>
+                <button id="ZOOM-CONT-CLOSE"></button>
+                <a id="ZOOM-CONT-DOWNLOAD" download></a>
+            </div>
         </div>
         <header>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href="" id="ACKNOWLEDGEMENTS-LINK">Acknowledgements</a></li>
-            </ul>
+            <div id="MOB-NAV">
+                <a id="HOME" href=""></a>
+                <input type="checkbox" id="HAMBURGER"/>
+                <label for="HAMBURGER"></label>
+            </div>
+            <nav>
+                <ul id="MENU">
+                    <li class="item"><a href="#PT1">SYMMETRY</a></li>
+                    <li class="item"><a href="#PT2">FRIEZE</a></li>
+                    <li class="item"><a href="#PT3">TESSELLATIONS</a></li>
+                    <li class="item"><a href="#PT4">FRACTALS</a></li>
+                    <li class="item"><a href="#MAIN-ACKNOWLEDGEMENTS" id="ACKNOWLEDGEMENTS-LINK">ACKNOWLEDGEMENTS</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section id="LANDING">
                 <h1>DIGITAL GALLERY WALK</h1>
-                <p id="LANDING-ABOUT"></p>
-                <button> See the Artworks! </button>
+                <p id="LANDING-ABOUT">View amazing artworks created by select students of 11 - Cassia! Immortalized here for future eyes to see :]</p>
             </section>
-            <section id="PT1">
-                <a href=""><h2>PERFORMANCE TASK #1: Window Perfect Symmetry</h2></a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
+
+            <section class="PTs" id="PT1">
+                <h2><a class="section-title" href="./pages/symmetry.html">PERFORMANCE TASK #1</a></h2>
+                <p class="pt-title"><strong> Window Perfect Symmetry </strong></p>
+                <p class="section-desc"> Showcases beautiful window designs that depict symmetry. </p>
+                <div class="carousel">
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Window1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window3.jpg" />
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window5.png"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Window1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window3.jpg" />
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Window5.png"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                </div>
             </section>
-            <section id="PT2">
-                <a href=""><h2>PERFORMANCE TASK #2: Frieze Pattern</h2></a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
+
+            <section class="PTs" id="PT2">
+                <h2><a class="section-title" href="./pages/frieze.html">PERFORMANCE TASK #2</a></h2>
+                <p class="pt-title"><strong> Frieze Pattern </strong></p>
+                <p class="section-desc"> Showcases beautiful border designs, otherwise known as "Frieze Patterns".</p>
+                <div class="carousel">
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Freize3.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze5.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Freize3.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Frieze5.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                </div>
             </section>
-            <section id="PT3">
-                <a href=""><h2>PERFORMANCE TASK #3: Tessellations</h2></a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
+
+            <section class="PTs" id="PT3">
+                <h2><a class="section-title" href="./pages/tessellation.html">PERFORMANCE TASK #3</a></h2>
+                <p class="pt-title"><strong> Tessellations </strong></p>
+                <p class="section-desc">Showcases original tessellation made using tiled.art.</p>
+                <div class="carousel">
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation3.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation5.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation3.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Tessellation5.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                </div>
             </section>
-            <section id="PT4">
-                <a href=""><h2>PERFORMANCE TASK #4: Fractals</h2></a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
-                <a href="">
-                    <article class="artwork-card">
-                        <img src=""/>
-                        <div id="card-overlay">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </article>
-                </a>
+
+            <section class="PTs" id="PT4">
+                <h2><a class="section-title" href="./pages/fractal.html">PERFORMANCE TASK #4</a></h2>
+                <p class="pt-title"><strong> Fractals </strong></p>
+                <p class="section-desc">Shows beautiful depictions and interpretations of fractals in artwork.</p>
+                <div class="carousel">
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal3.png"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal5.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                    <div class="group">
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal1.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal2.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal3.png"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal4.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                        <article class="artwork-card">
+                            <img src="./assets/Fractal5.jpg"/>
+                            <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                        </article>
+                    </div>
+                </div>
             </section>
+
             <section id="MAIN-ACKNOWLEDGEMENTS">
+                <h2> ACKNOWLEDGEMENTS </h2>
+                
+                <input type="checkbox" id="loadbtn"/>
+
+                <div id="ACKNOWLEDGEMENTS-CONT">
+                    <article class="acknowledgement-card" id="ADVISER">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Adviser] </strong>
+                            <p> Description/Gratitude</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                    <article class="acknowledgement-card">
+                        <img/>
+                        <div id="ACKNOWLEDGEMENTS-TEXT-BLOCK">
+                            <strong> [Name of Student] </strong>
+                            <p> Student Description/Contribution</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="LOADBTNCONT">
+                    <label for="loadbtn" id="VIEWMORE">VIEW MORE</label>
+                    <label for="loadbtn" id="VIEWLESS">VIEW LESS </label>
+                </div>
             </section>
         </main>
         <footer>
-            <section id="FOOTER-ABOUT"></section>
-            <section id="FOOTER-CONTACT"></section>
+            <strong>DIGITAL GALLERY WALK SITE</strong>
+            <section id="FOOTER-ABOUT">
+                This site digitally contains the different artworks of 11 - Cassia, from S.Y. '26 - '27, forever.
+                All code found on this site is open-source and can be found on <a href="https://github.com/jhazmineaudrey/Digital-Gallery-Walk-Site">Github</a>.
+                Landing section videos/pictures are all sources from <a href="https://pixabay.com/">Pixabay</a>.
+            </section>
+            <section id="FOOTER-CONTACT">
+                <a href="https://www.facebook.com/"><img src="./assets/facebook.png"/></a>
+                <a href="https://www.instagram.com/"><img src="./assets/instagram.png"/></a>
+                <a href="https://www.tiktok.com/"><img src="./assets/tiktok.png"/></a>
+                <a href="https://ngl.link/"><img src="./assets/ngl.png"/></a>
+            </section>
+            <p>© 2026 11 - EM - Cassia. All rights reserved.</p>
         </footer>
     </body>
 </html>
