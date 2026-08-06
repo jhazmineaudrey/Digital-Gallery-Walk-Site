@@ -1,0 +1,122 @@
+<!--
+The Digital Gallery Walk Site is a website which can display several downloadable artworks based on previously-set categories. 
+Copyright (C) 2026 Jhazmine Audrey Perez
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta 
+            name="description"
+            content="Digital Gallery Walk - Symmetry Page | A permanent version of the Gallery Walk containing different
+            chosen artworks created for the Finite Mathematics subject, made by members of this class."
+        />
+        <meta name="author" content="Jhazmine Audrey Perez"/>
+
+        <!-- Open Graph Tags-->
+        <meta property="og:title" content="Digital Gallery Walk | Cassia"/>
+        <meta
+            property="og:description"
+            content="Digital Gallery Walk - Symmetry Page | A permanent version of the Finite Mathematics
+            Gallery Walk project of Cassia."
+        /> 
+        <meta property="og:url" content=""/> <!-- Add Domain URL here-->
+
+        <meta property="og:image" content=""/> <!-- Add Image URL here-->
+        <meta property="og:image:alt" content=""/>
+
+        <meta property="og:type" content="Website"/>
+
+        <!-- External Links -->
+        <link rel="stylesheet" href="../css/pages.css"/>
+        <script src="../app.js" defer></script>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Yesteryear&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="ZOOMED-IN-CONTAINER">
+            <div id="ZOOM-IMG-CONT">
+                <img id="ZOOM-IMG"/>
+                <button id="ZOOM-CONT-CLOSE"></button>
+                <a id="ZOOM-CONT-DOWNLOAD" download></a>
+            </div>
+        </div>
+        <header>
+            <div id="MOB-NAV">
+                <a id="HOME" href="../index.html"></a>
+                <input type="checkbox" id="HAMBURGER"/>
+                <label for="HAMBURGER"></label>
+            </div>
+            <nav>
+                <ul id="MENU">
+                    <li class="item"><a href="">SYMMETRY</a></li>
+                    <li class="item"><a href="../pages/frieze.html">FRIEZE</a></li>
+                    <li class="item"><a href="../pages/tessellation.html">TESSELLATIONS</a></li>
+                    <li class="item"><a href="../pages/fractal.html">FRACTALS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="PTs">
+                <h2 class="section-title"><strong>PERFORMANCE TASK #1</strong></h2>
+                <p class="pt-title"><strong> Window Perfect Symmetry </strong></p>
+                <p class="section-desc"> Showcases beautiful window designs that depict symmetry. </p>
+                <div class="group">
+                    <article class="artwork-card">
+                        <img src="../assets/Window1.jpg"/>
+                        <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                    </article>
+                    <article class="artwork-card">
+                        <img src="../assets/Window2.jpg"/>
+                        <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                    </article>
+                    <article class="artwork-card">
+                        <img src="../assets/Window3.jpg"/>
+                        <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                    </article>
+                    <article class="artwork-card">
+                        <img src="../assets/Window4.jpg"/>
+                        <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                    </article>
+                    <article class="artwork-card">
+                        <img src="../assets/Window5.jpg"/>
+                        <div class="card-overlay"><strong>[Artist Name]</strong></div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <strong>DIGITAL GALLERY WALK SITE</strong>
+            <section id="FOOTER-ABOUT">
+                This site digitally contains the different artworks of 11 - Cassia, from S.Y. '26 - '27, forever.
+                All code found on this site is open-source and can be found on <a href="https://github.com/jhazmineaudrey/Digital-Gallery-Walk-Site">Github</a>.
+                Landing section videos/pictures are all sources from <a href="https://pixabay.com/">Pixabay</a>.
+            </section>
+            <section id="FOOTER-CONTACT">
+                <a href="https://www.facebook.com/"><img src="../assets/facebook.png"/></a>
+                <a href="https://www.instagram.com/"><img src="../assets/instagram.png"/></a>
+                <a href="https://www.tiktok.com/"><img src="../assets/tiktok.png"/></a>
+                <a href="https://ngl.link/"><img src="../assets/ngl.png"/></a>
+            </section>
+            <p>© 2026 11 - EM - Cassia. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
