@@ -18,9 +18,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 //LANDING
 
-/*
 const viewArtButton = document.querySelector("#LANDING-PAGE-BUTTON");
 const landing = document.querySelectorAll(".landing");
+const landvid = document.querySelector("#WEBSITE-LANDING-CONT")
 
 window.addEventListener("load", () => {
     const introText = document.querySelector("#LANDING-PAGE-INTRO");
@@ -52,7 +52,9 @@ viewArtButton.addEventListener("click", async () => {
             el.remove();
         };
     });
-});*/
+
+    landvid.classList.remove("active");
+});
 
 // ZOOM IN
 const card = document.querySelectorAll(".artwork-card");

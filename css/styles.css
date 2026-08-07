@@ -40,11 +40,20 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 7rem;
-    transition: filter 0.5s ease-in-out
+    transition: filter 0.5s ease-in-out;
 }
 
 /*LANDING STYLES*/
-/*
+
+#WEBSITE-LANDING-CONT {
+    position: relative;
+    z-index: 999;
+}
+
+body:has(#WEBSITE-LANDING-CONT.active) {
+    overflow: hidden;
+}
+
 #LANDING-PAGE-VIDEO {
     position: fixed;
     top: 0;
@@ -92,7 +101,7 @@ main {
     align-self: center;
     color: white;
     font-size: 2rem;
-    z-index: 1000;
+    z-index: 999;
 }
 
 #LANDING-PAGE-INTRO::before {
@@ -169,7 +178,7 @@ main {
     #LANDING-PAGE-ANIM p:not(#LANDING-PAGE-INTRO) {
         font-size: 5vw;
     }
-}*/
+}
 
 /* NAVIGATION */
 header {
@@ -825,6 +834,7 @@ nav {
 
 /* FOOTER */
 footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -835,7 +845,7 @@ footer {
     border-top: 5px solid var(--border-color);
     box-shadow: 0px 0px 20px 10px rgba(44,161,255,0.98);
     align-items: center;
-    color: white
+    color: white;
 }
 
 footer strong {
@@ -853,7 +863,6 @@ footer strong {
     animation: float 5s ease-in-out infinite alternate;
     animation-delay: 0.5s
 }
-
 
 #FOOTER-ABOUT a {
     color: rgb(105, 221, 227)
