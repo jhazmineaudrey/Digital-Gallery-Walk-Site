@@ -24,10 +24,12 @@ A simple website solely developed by Jhaz. It elegantly displays different artwo
 My current class has a project where we display the artworks we've made for a specific project in person for other classes to see. My teacher also stated that she'd really wished they could stay on display for longer, but unfortunately 2 weeks is the maximum time. This got me thinking; as a programmer, I could definitely find a way to cement or immortalize the Gallery Walk — via an online version of it being deployed online. I've also just *really* wanted to find an excuse to code something for academics since I enjoy coding so much, and really want to integrate my studies into it.
 
 ## How to Use the Program
-1. Access the website's page on ***[insert deployed link here]***. No need to install anything on your local device.
+1. Access the website's page on https://jhazmineaudrey.github.io/Digital-Gallery-Walk-Site/. No need to install anything on your local device.
 2. Explore the site and view beautiful artworks.
 3. Choose to download any artworks you find beautiful and worthy to keep on your device.
 4. View the credits to see the roles and contributions of each member of the Gallery Walk.
 
 ## Screenshots!
-***[To be Added]***
+![Landing Page](https://cdn.phototourl.com/free/2026-08-07-c6620cce-569d-4521-ad4b-333223d27a66.png)
+![Artwork Carousel](https://cdn.phototourl.com/free/2026-08-07-e1fbfbbf-8181-457b-b65a-75a44209d6c4.png)
+![Footer & Acknowledgements](https://cdn.phototourl.com/free/2026-08-07-1a83a9d0-de80-44cd-91b5-3ab39fc9d3b0.png)
